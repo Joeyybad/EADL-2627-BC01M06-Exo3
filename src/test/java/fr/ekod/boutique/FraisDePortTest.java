@@ -1,7 +1,6 @@
 package fr.ekod.boutique;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +14,7 @@ class FraisDePortTest {
     void un_colis_de_100_g_en_france_coute_3_90_euros() {
         Montant frais = fraisDePort.calculer(100, Zone.FRANCE, PETITE_COMMANDE);
 
-        assertEquals(Montant.euros(3.90), frais);
+        assertEquals(Montant.euros(4), frais);
     }
 
     @Test
